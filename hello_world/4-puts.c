@@ -1,10 +1,12 @@
 #include <stdio.h>
 
+/**
+ * main: output to standard output
+ * return: end program with no errors
+ */
+
 int main(void)
 {
-	/**
-	 * printing to standard output using puts()
-	 */
 
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
