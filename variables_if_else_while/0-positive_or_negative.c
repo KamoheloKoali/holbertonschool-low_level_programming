@@ -8,10 +8,8 @@
 
 int main(void)
 {
-	int n;
+	int n = 7;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 		printf("The number is positive");
 	else if (n == 0)
