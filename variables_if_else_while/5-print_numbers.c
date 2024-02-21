@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints a number 
+ * main - prints a number
  * Return: returns a list of integers in the base 10 starting from 0
  */
 
