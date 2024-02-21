@@ -19,7 +19,7 @@ main:
 	movl	%eax, %edi
 	call	putchar@PLT
 	movzbl	-1(%rbp), %eax
-	addl	$1, %eax
+	subl	$1, %eax
 	movb	%al, -1(%rbp)
 .L2:
 	cmpb	$96, -1(%rbp)
