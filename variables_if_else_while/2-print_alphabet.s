@@ -11,27 +11,21 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	subq	$48, %rsp
-	movq	%fs:40, %rax
-	movq	%rax, -8(%rbp)
-	xorl	%eax, %eax
-	movabsq	$7523094288207667809, %rax
-	movabsq	$8101815670912281193, %rdx
-	movq	%rax, -48(%rbp)
-	movq	%rdx, -40(%rbp)
-	movabsq	$8680537053616894577, %rax
-	movq	%rax, -32(%rbp)
-	movw	$31353, -24(%rbp)
-	movb	$0, -22(%rbp)
-	leaq	-48(%rbp), %rax
+	subq	$16, %rsp
+	movb	$97, -1(%rbp)
+	movb	$97, -1(%rbp)
+	jmp	.L2
+.L3:
+	movsbl	-1(%rbp), %eax
 	movl	%eax, %edi
 	call	putchar@PLT
+	movzbl	-1(%rbp), %eax
+	addl	$1, %eax
+	movb	%al, -1(%rbp)
+.L2:
+	cmpb	$122, -1(%rbp)
+	jle	.L3
 	movl	$0, %eax
-	movq	-8(%rbp), %rdx
-	subq	%fs:40, %rdx
-	je	.L3
-	call	__stack_chk_fail@PLT
-.L3:
 	leave
 	.cfi_def_cfa 7, 8
 	ret
