@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - prints out the 'alphabet' 
- * Return: returns the string 
+ * main - prints out the alphabet
+ * Return: returns the string
  */
 
 int main(void)
 {
 	char letter = 'a';
-
-       	while (letter <= 'z')
+	while (letter <= 'z')
 	{
 		putchar (letter);
 		letter++;
