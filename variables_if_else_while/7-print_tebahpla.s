@@ -24,6 +24,8 @@ main:
 .L2:
 	cmpb	$96, -1(%rbp)
 	jg	.L3
+	movl	$10, %edi
+	call	putchar@PLT
 	movl	$0, %eax
 	leave
 	.cfi_def_cfa 7, 8
