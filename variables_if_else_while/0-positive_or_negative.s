@@ -4,7 +4,7 @@
 .LC0:
 	.string	"The number is positive"
 .LC1:
-	.string	"The number is 0"
+	.string	"The number is zero"
 .LC2:
 	.string	"The number is negative"
 	.text
@@ -31,22 +31,19 @@ main:
 	jle	.L2
 	leaq	.LC0(%rip), %rax
 	movq	%rax, %rdi
-	movl	$0, %eax
-	call	printf@PLT
+	call	puts@PLT
 	jmp	.L3
 .L2:
 	cmpl	$0, -4(%rbp)
 	jne	.L4
 	leaq	.LC1(%rip), %rax
 	movq	%rax, %rdi
-	movl	$0, %eax
-	call	printf@PLT
+	call	puts@PLT
 	jmp	.L3
 .L4:
 	leaq	.LC2(%rip), %rax
 	movq	%rax, %rdi
-	movl	$0, %eax
-	call	printf@PLT
+	call	puts@PLT
 .L3:
 	movl	$0, %eax
 	leave
