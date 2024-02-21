@@ -27,8 +27,6 @@ main:
 .L3:
 	cmpb	$57, -2(%rbp)
 	jle	.L4
-	cmpb	$57, -2(%rbp)
-	jne	.L2
 	movb	$97, -1(%rbp)
 	jmp	.L5
 .L6:
