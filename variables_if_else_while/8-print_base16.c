@@ -14,10 +14,12 @@ int main(void)
 	{
 		for (num = '0'; num <= '9'; num++)
 			putchar(num);
-	} else if (num == '9')
-	{
-		for (alp = 'a'; alp <= 'f'; alp++)
-			putchar(alp);
+
+		if (num == '9')
+		{
+			for (alp = 'a'; alp <= 'f'; alp++)
+				putchar(alp);
+		}
 	}
 	putchar('\n');
 	return (0);
