@@ -19,10 +19,14 @@ main:
 .L5:
 	movzbl	-3(%rbp), %eax
 	cmpb	-2(%rbp), %al
-	je	.L2
+	je	.L3
 	movzbl	-3(%rbp), %eax
 	cmpb	-1(%rbp), %al
 	jne	.L4
+.L3:
+	movzbl	-3(%rbp), %eax
+	addl	$1, %eax
+	movb	%al, -3(%rbp)
 	jmp	.L2
 .L4:
 	movsbl	-3(%rbp), %eax
