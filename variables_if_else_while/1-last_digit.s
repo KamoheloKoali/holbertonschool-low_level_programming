@@ -10,6 +10,9 @@
 	.align 8
 .LC2:
 	.string	"Last digit of %d is %d and is less than 6 and not 0\n"
+	.align 8
+.LC3:
+	.string	"Last digit of %d is %d and is less than 0\n"
 	.text
 	.globl	main
 	.type	main, @function
@@ -68,13 +71,22 @@ main:
 	jmp	.L3
 .L4:
 	cmpl	$5, -4(%rbp)
-	jg	.L3
+	jg	.L5
 	cmpl	$0, -4(%rbp)
-	je	.L3
+	je	.L5
 	movl	-4(%rbp), %edx
 	movl	-8(%rbp), %eax
 	movl	%eax, %esi
 	leaq	.LC2(%rip), %rax
+	movq	%rax, %rdi
+	movl	$0, %eax
+	call	printf@PLT
+	jmp	.L3
+.L5:
+	movl	-4(%rbp), %edx
+	movl	-8(%rbp), %eax
+	movl	%eax, %esi
+	leaq	.LC3(%rip), %rax
 	movq	%rax, %rdi
 	movl	$0, %eax
 	call	printf@PLT
