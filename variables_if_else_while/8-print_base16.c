@@ -8,6 +8,7 @@
 int main(void)
 {
 	char num = '0';
+	char alp;
 
 	if (num <= '9')
 	{
@@ -15,8 +16,8 @@ int main(void)
 			putchar(num);
 	} else if (num == '9')
 	{
-		for (num = 'a'; num <= 'f'; num++)
-			putchar(num);
+		for (alp = 'a'; alp <= 'f'; alp++)
+			putchar(alp);
 	}
 	putchar('\n');
 	return (0);

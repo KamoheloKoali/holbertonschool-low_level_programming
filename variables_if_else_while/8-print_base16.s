@@ -12,24 +12,24 @@ main:
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
 	subq	$16, %rsp
-	movb	$48, -1(%rbp)
-	cmpb	$57, -1(%rbp)
+	movb	$48, -2(%rbp)
+	cmpb	$57, -2(%rbp)
 	jg	.L2
-	movb	$48, -1(%rbp)
+	movb	$48, -2(%rbp)
 	jmp	.L3
 .L4:
-	movsbl	-1(%rbp), %eax
+	movsbl	-2(%rbp), %eax
 	movl	%eax, %edi
 	call	putchar@PLT
-	movzbl	-1(%rbp), %eax
+	movzbl	-2(%rbp), %eax
 	addl	$1, %eax
-	movb	%al, -1(%rbp)
+	movb	%al, -2(%rbp)
 .L3:
-	cmpb	$57, -1(%rbp)
+	cmpb	$57, -2(%rbp)
 	jle	.L4
 	jmp	.L5
 .L2:
-	cmpb	$57, -1(%rbp)
+	cmpb	$57, -2(%rbp)
 	jne	.L5
 	movb	$97, -1(%rbp)
 	jmp	.L6
