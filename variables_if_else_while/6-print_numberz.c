@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/** 
+/**
  * main - print numbers
  * Return: return integers
  */
