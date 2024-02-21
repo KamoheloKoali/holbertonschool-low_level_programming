@@ -13,11 +13,10 @@ int main(void)
 
 	while (alphabt <= 'z')
 	{
-		putchar(alphabt);
-		alphabt++;
-
 		if (alphabt == letter || alphabt == letter1)
 			continue;
+		putchar(alphabt);
+		alphabt++;
 	}
 	putchar('\n');
 	return (0);

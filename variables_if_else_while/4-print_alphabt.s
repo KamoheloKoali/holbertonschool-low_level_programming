@@ -16,6 +16,14 @@ main:
 	movb	$101, -2(%rbp)
 	movb	$113, -1(%rbp)
 	jmp	.L2
+.L5:
+	movzbl	-3(%rbp), %eax
+	cmpb	-2(%rbp), %al
+	je	.L2
+	movzbl	-3(%rbp), %eax
+	cmpb	-1(%rbp), %al
+	jne	.L4
+	jmp	.L2
 .L4:
 	movsbl	-3(%rbp), %eax
 	movl	%eax, %edi
@@ -23,17 +31,9 @@ main:
 	movzbl	-3(%rbp), %eax
 	addl	$1, %eax
 	movb	%al, -3(%rbp)
-	movzbl	-3(%rbp), %eax
-	cmpb	-2(%rbp), %al
-	je	.L6
-	movzbl	-3(%rbp), %eax
-	cmpb	-1(%rbp), %al
-	jne	.L2
-.L6:
-	nop
 .L2:
 	cmpb	$122, -3(%rbp)
-	jle	.L4
+	jle	.L5
 	movl	$10, %edi
 	call	putchar@PLT
 	movl	$0, %eax
