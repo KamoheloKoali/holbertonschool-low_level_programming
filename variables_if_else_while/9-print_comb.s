@@ -25,9 +25,9 @@ main:
 	call	putchar@PLT
 	addl	$1, -4(%rbp)
 .L2:
-	cmpl	$9, -4(%rbp)
+	cmpl	$8, -4(%rbp)
 	jle	.L3
-	movl	$10, %edi
+	movl	$57, %edi
 	call	putchar@PLT
 	movl	$0, %eax
 	leave
