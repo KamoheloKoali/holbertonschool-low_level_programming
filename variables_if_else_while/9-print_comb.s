@@ -14,21 +14,26 @@ main:
 	subq	$16, %rsp
 	movl	$0, -4(%rbp)
 	jmp	.L2
-.L3:
+.L5:
 	movl	-4(%rbp), %eax
 	addl	$48, %eax
 	movl	%eax, %edi
 	call	putchar@PLT
+	cmpl	$9, -4(%rbp)
+	je	.L3
 	movl	$44, %edi
 	call	putchar@PLT
 	movl	$32, %edi
 	call	putchar@PLT
+	jmp	.L4
+.L3:
+	movl	$10, %edi
+	call	putchar@PLT
+.L4:
 	addl	$1, -4(%rbp)
 .L2:
-	cmpl	$8, -4(%rbp)
-	jle	.L3
-	movl	$57, %edi
-	call	putchar@PLT
+	cmpl	$9, -4(%rbp)
+	jle	.L5
 	movl	$0, %eax
 	leave
 	.cfi_def_cfa 7, 8
