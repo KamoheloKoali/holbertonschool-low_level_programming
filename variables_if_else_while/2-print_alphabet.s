@@ -18,6 +18,9 @@ main:
 	movsbl	-1(%rbp), %eax
 	movl	%eax, %edi
 	call	putchar@PLT
+	movzbl	-1(%rbp), %eax
+	addl	$1, %eax
+	movb	%al, -1(%rbp)
 .L2:
 	cmpb	$122, -1(%rbp)
 	jle	.L3
