@@ -7,14 +7,15 @@
 int _islower(int c)
 {       
         char alph = c + '0';
-        char lower;
-	char upper;
+        char lower = 'a';
+	char upper = 'A';
         
         for (lower = 'a';  lower <= 'z'; lower++)
         {       
                 if (alph == lower)
 		{
-			return (1);
+			_putchar('1');
+			break;
 		}
 	}
 
