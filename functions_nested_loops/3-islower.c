@@ -6,22 +6,21 @@
 
 int _islower(int c)
 {       
-        char alph = c + '0';
-        char lower = 'a';
-	char upper = 'A';
+        char lower;
+	char upper;
         
-        for (lower = 'a';  lower <= 'z'; lower++)
+        for (lower = 97;  lower <= 122; lower++)
         {       
-                if (alph == lower)
+                if (c == lower)
 		{
 			_putchar('1');
 			break;
 		}
 	}
 
-	for (upper = 'A'; upper <= 'Z'; upper++)
+	for (upper = 65; upper <= 90; upper++)
 	{
-		if (alph == upper)
+		if (c == upper)
 		{
 			_putchar('0');
 			break;
