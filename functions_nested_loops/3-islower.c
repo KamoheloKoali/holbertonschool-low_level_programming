@@ -9,12 +9,12 @@ int _islower(int c)
         char alph = c = '0';
         char lower;
         
-        for (lower = 'a';  lower < 'a'; lower++)
+        for (lower = 'a';  lower <= 'z'; lower++)
         {       
                 if (alph == lower)
-			return (1);
+			_putchar('1');
 		else
-			return (0);
+			_putchar('0');
 	}
 
 	return (0);
