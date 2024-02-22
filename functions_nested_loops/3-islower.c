@@ -15,10 +15,7 @@ int _islower(int c)
                 {
                         _putchar('1');
                         break;
-                } else
-		{
-			continue;
-		}
+                }
         }
 
         for (upper = 65; upper <= 90; upper++)
@@ -27,9 +24,6 @@ int _islower(int c)
                 {
                         _putchar('0');
                         break;
-                } else
-                {
-                    continue;
                 }
         }
 
