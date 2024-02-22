@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * main - entry point
- * Return: end point
+ * print_alphabet - print alphabets
  */
 
 void print_alphabet(void)
@@ -12,6 +11,5 @@ void print_alphabet(void)
 	for (alph = 'a'; alph <= 'z'; alph++)
 		_putchar(alph);
 	_putchar('\n');
-	return;
 }
 
