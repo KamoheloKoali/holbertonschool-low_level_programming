@@ -14,8 +14,7 @@ int _islower(int c)
         {       
                 if (alph == lower)
 		{
-			_putchar('1');
-			break;
+			return (1);
 		}
 	}
 
