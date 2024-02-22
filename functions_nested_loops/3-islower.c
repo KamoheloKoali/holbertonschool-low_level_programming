@@ -8,6 +8,7 @@ int _islower(int c)
 {       
         char alph = c + '0';
         char lower;
+	char upper;
         
         for (lower = 'a';  lower <= 'z'; lower++)
         {       
@@ -16,7 +17,11 @@ int _islower(int c)
 			_putchar('1');
 			break;
 		}
-		else
+	}
+
+	for (upper = 'A'; upper <= 'Z'; upper++)
+	{
+		if (alph == upper)
 		{
 			_putchar('0');
 			break;
