@@ -2,7 +2,7 @@
 
 /**
  * _islower -  checks if character is lowercase or uppercase
- * @c - variable for paremeter
+ * @c: variable for paremeter
  * Return: exit point
  */
 
