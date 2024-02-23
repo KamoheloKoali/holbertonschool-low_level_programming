@@ -2,20 +2,18 @@
 
 /**
  * _abs(int) - tests whether a number is absolute or not
- * @int: data type for parameter
+ * @n: variable for parameter
  * Return: exit point
  */
 
 int _abs(int n)
 {
-	int num = n * (-1);
+	int num = -n;
 
 	if (n > 0)
-		_putchar(n);
+		return (n);
 	else if (n < 0)
-		_putchar(num);
-	else if (n == 0)
-		_putchar(0);
-	return (3);
+		return (num);
+	return (0);
 }
 
