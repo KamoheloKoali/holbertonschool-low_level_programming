@@ -16,6 +16,6 @@ int _abs(int n)
 		_putchar(num);
 	else if (n == 0)
 		_putchar(0);
-	return (1);
+	return (3);
 }
 
