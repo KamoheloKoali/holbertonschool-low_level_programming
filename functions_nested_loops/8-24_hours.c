@@ -27,32 +27,15 @@ void jack_bauer(void)
 			{
 				for (num3 = '0'; num3 <= '9'; num3++)
 				{
-					if (num < '2' && num1 == '3' && num2 == '5' && num3 == '9')
-					{
-						for (num = '1'; num <= '2'; num++)
-						{
-							for (num1 = '3'; num1 <= '9'; num1++)
-							{
-								for (num2 = '0'; num2 <= '5'; num2++)
-								{
-									for (num3 = '0'; num3 <= '9'; num3++)
-									{
-										_putchar(num);
-										_putchar(num1);
-										_putchar(':');
-										_putchar(num2);
-										_putchar(num3);
-										_putchar('\n');
+					_putchar(num);
+					_putchar(num1);
+					_putchar(':');
+					_putchar(num2);
+					_putchar(num3);
+					_putchar('\n');
 
-										if (num == '2' && num1 == '3' && num2 == '5' && num3 == '9')
-										{
-											return;
-										}
-									}
-								}
-							}
-						}
-					}
+					if (num == '2' && num1 == '3' && num2 == '5' && num3 == '9')
+						return;
 				}
 			}
 		}
