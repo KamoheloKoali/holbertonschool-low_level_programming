@@ -21,6 +21,10 @@ void print_to_98(int n)
 		for (n = n; n >= 98; n--)
 			printf("%d, ", n);
 		_putchar('\n');
+	} else
+	{
+		_putchar('98');
+		_putchar('\n');
 	}
 }
 
