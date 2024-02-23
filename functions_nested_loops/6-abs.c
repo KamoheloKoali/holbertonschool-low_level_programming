@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _abs(int) - tests whether a number is absolute or not
+ * _abs - tests whether a number is absolute or not
  * @n: variable for parameter
  * Return: exit point
  */
