@@ -8,19 +8,19 @@
 
 int print_last_digit(int n)
 {
-	int last = n % 10;
-	char lastchar = last + '0';
+	int last;
+	char lastchar;
 
 	if (n >= 10)
 	{
-		int last = n % 10;
-		char lastchar = last + '0';
+		last = n % 10;
+		lastchar = last + '0';
 
 		_putchar(lastchar);
 	} else if (n <= -10)
 	{
-		int last = -n % 10;
-		char lastchar = last + '0';
+		last = -n % 10;
+		lastchar = last + '0';
 
 		_putchar(lastchar);
 	}
