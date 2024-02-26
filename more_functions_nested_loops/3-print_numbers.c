@@ -10,7 +10,7 @@
 void print_numbers(void)
 {
 	int n = 0;
-	char cnum; 
+	char cnum;
 
 	for (n = 0; n <= 9; n++)
 	{
@@ -19,4 +19,4 @@ void print_numbers(void)
 	}
 	_putchar('\n');
 }
-	
+
