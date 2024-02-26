@@ -7,23 +7,25 @@
 
 void more_numbers(void)
 {
-	int n, n1, num, num2;
+	int i, j, k, doubleDigit;
 
-	for (n = 0; n < 10; n++)
+	for (j = 0; j < 10; j++)
 	{
-		for (n1 = 0; n1 < 15; n1++)
+		for (i = 0; i < 15; i++)
 		{
-			if (n1 < 10)
-				_putchar(n1 + '0');
+			if (i < 10)
+			{
+				_putchar(i + '0');
+			}
 			else
 			{
-				for (num = 0; num < 2; num++)
+				for (k = 0; k < 2; k++)
 				{
-					if (num == 0)
-						num2 = n / 10;
+					if (k == 0)
+						doubleDigit = i / 10;
 					else
-						num2 = n % 10;
-					_putchar(num2 + '0');
+						doubleDigit = i % 10;
+					_putchar(doubleDigit + '0');
 				}
 			}
 		}
