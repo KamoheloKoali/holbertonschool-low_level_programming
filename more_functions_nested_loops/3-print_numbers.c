@@ -17,4 +17,6 @@ void print_numbers(void)
 		cnum = n + '0';
 		_putchar(cnum);
 	}
+	_putchar('\n');
+}
 	
