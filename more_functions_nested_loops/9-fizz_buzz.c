@@ -2,7 +2,7 @@
 
 /**
  * main - entry point
- * fizz_buzz - print numbers from 1 to 100wwith multiples of 3 or 5 as fizz or buzz
+ * fizz_buzz - print numbers from 1 to 100
  *  Return: exit point
  */
 
