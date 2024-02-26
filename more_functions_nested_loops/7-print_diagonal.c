@@ -7,26 +7,19 @@
 
 void print_diagonal(int n)
 {
-	int num;
-	int num1;
-	int num2 = n-1;
+	int i, j;
 
-	for (num = n; n > 0; num--)
-	{
-		if (num < n)
+	if (n <= 0)
+		_putchar('\n');
+	else
+		for (j = 0; n > 0; n--, j++)
 		{
-			for (num1 = 0; num1 < num2; num1++)
+			for (i = 0; i < j; i++)
 			{
 				_putchar(' ');
-				_putchar('\\');
 			}
-		} else if (num == n)
-		{
 			_putchar('\\');
 			_putchar('\n');
-		} else
-			_putchar('\n');
-	}
-	_putchar('\n');
+		}
 }
 
