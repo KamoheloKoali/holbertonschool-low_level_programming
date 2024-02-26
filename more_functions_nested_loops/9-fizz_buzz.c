@@ -2,8 +2,8 @@
 
 /**
  * main - entry point
- * fizz_buzz - print numbers from 1 to 100 wwith multiples of 3 or 5 as fizz or buzz and of both 3 and 5 as fizz buzz
- * Return: exit point
+ * fizz_buzz - print numbers from 1 to 100wwith multiples of 3 or 5 as fizz or buzz
+ *  Return: exit point
  */
 
 void fizz_buzz(void)
@@ -13,7 +13,7 @@ void fizz_buzz(void)
 	for (num = 1; num <= 100; num++)
 	{
 		if ((num % 3) == 0 && (num % 5) == 0)
-				printf("FizzBuzz");
+			printf("FizzBuzz");
 		else if  ((num % 3) == 0)
 			printf("Fizz");
 		else if ((num % 5) == 0)
