@@ -15,8 +15,16 @@ void more_numbers(void)
 	{
 		for (n1 = 0; n1 <= 14; n1++)
 		{
-			cnum = n1 + '0';
-			_putchar(cnum);
+			if (n < 10)
+			{
+				cnum = n1 + '0';
+			       _putchar(cnum);
+			} else
+			{	
+				n1 = n1 / 10;
+				cnum = '0' + n1 % 10;
+				_putchar(cnum);
+			}
 		}
 		_putchar('\n');
 	}
