@@ -20,10 +20,10 @@ void fizz_buzz(void)
 			printf("Buzz");
 		else
 			printf("%d", num);
-		printf(" ");
 
 		if (num == 100)
-			printf(" ");
+			continue;
+		printf(" ");
 	}
 	printf("\n");
 }
