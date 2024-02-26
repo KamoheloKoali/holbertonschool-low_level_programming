@@ -10,6 +10,8 @@ int _isdigit(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'z'))
 	      return (0);
+	else if (c >= 32 && c <= 126)
+		return (0);
 	return (1);
 }
 
