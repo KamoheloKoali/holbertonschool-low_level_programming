@@ -22,6 +22,7 @@ void fizz_buzz(void)
 			printf("%d", num);
 		printf(" ");
 	}
+	printf("\n");
 }
 
 int main(void)
