@@ -18,5 +18,6 @@ void print_most_numbers(void)
 		else
 			_putchar(cnum);
 	}
+	_putchar('\n');
 }
 
