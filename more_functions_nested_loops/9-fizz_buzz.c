@@ -2,11 +2,10 @@
 
 /**
  * main - entry point
- * fizz_buzz - print numbers from 1 to 100
- *  Return: exit point
+ * Return: exit point
  */
 
-void fizz_buzz(void)
+int main(void)
 {
 	int num;
 
@@ -26,11 +25,6 @@ void fizz_buzz(void)
 		printf(" ");
 	}
 	printf("\n");
-}
-
-int main(void)
-{
-	fizz_buzz();
 	return (0);
 }
 
