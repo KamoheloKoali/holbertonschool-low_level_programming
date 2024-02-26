@@ -3,7 +3,6 @@
 /**
  * print_numbers - print numbers from 1 up to 9
  * @void: no parameter
- * @n: variable for storing numbers
  */
 
 void print_numbers(void)
