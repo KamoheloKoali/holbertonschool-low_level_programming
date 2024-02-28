@@ -10,11 +10,11 @@ void print_array(int *a, int n)
 {
 	int length = 0;
 
-	while (a[length])
+	while (*a[length])
 	{
 		if (length == n)
 			return;
-		_putchar(a[length]);
+		_putchar(*a[length]);
 		length++;
 	}
 }
