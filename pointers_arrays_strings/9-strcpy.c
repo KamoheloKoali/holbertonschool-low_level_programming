@@ -9,7 +9,8 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	length = 0;
+	int length = 0;
+
 	while (src[length])
 	{
 		dest = src;
