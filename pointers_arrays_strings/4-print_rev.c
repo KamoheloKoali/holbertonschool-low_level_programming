@@ -7,14 +7,12 @@
 
 void print_rev(char *s)
 {
-	int length = -2;
-	char letter;
+	int length = 0;
 
 	while (s[length])
-	{
-		letter = s[length];
-		_putchar(letter);
-		length--;
-	}
+		length++;
+	while(length--)
+		_putchar(s[length]);
+	_putchar('\n');
 }
 
