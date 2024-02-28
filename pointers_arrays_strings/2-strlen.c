@@ -8,8 +8,10 @@
 
 int _strlen(char *s)
 {
-	char arr = {*s};
-	int length = sizeof(arr);
+	int length = 0;
+
+	while (s[length])
+		length++;
 	return (length);
 }
 
