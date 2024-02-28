@@ -15,8 +15,8 @@ void puts2(char *str)
 		{
 			if (length == 1)
 			{
-				int length1 = (length - 1) + 2;
-				_putchar(str[length1]);
+				length = (length - 1) + 2;
+				_putchar(str[length]);
 			} else
 			{
 				length += 2;
