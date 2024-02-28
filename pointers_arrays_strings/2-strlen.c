@@ -9,7 +9,7 @@
 int _strlen(char *s)
 {
 	char arr = {*s};
-	int length = sizeof(arr) / sizeof(arr[0]);
+	int length = sizeof(arr) / sizeof(*arr[0]);
 	return (length);
 }
 
