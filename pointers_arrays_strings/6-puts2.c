@@ -1,34 +1,31 @@
 #include "main.h"
 
 /**
- * puts2 - print every other character of a string 
- * @str: pointer for parameter
- */
+* _strlen - Returns the length of a string
+* @s: Variable being evaluated
+*
+* Return: Length of string
+*/
+int _strlen(char *s)
+{
+int i = 0;
 
+while (*s++)
+i++;
+return (i);
+}
+
+/**
+* puts2 - Prints one char out of 2 of a string
+* @str: String being evaluated
+*/
 void puts2(char *str)
 {
-	int length = 0;
+int i, len;
 
-	while (str[length])
-	{
-		if (length > 0)
-		{
-			if (length == 1)
-			{
-				length = (length - 1) + 2;
-				_putchar(str[length]);
-			} else
-			{
-				length += 2;
-				_putchar(str[length]);
-			}
-		}
-		else
-		{
-			_putchar(str[length]);
-			length++;
-		}
-
-	}
+len = _strlen(str);
+for (i = 0; i < len; i += 2)
+_putchar(*(str + i));
+_putchar('\n');
 }
 
