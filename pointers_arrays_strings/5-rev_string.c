@@ -9,21 +9,16 @@ void rev_string(char *s)
 {
 	int length = 0;
 
-	if (length == 0)
+	while (s[length])
 	{
-		while (s[length])
-		{
-			_putchar(s[length]);
-			length++;
-		}
-		_putchar('\n');
+		_putchar(s[length]);
+		length++;
 	}
-
-	else if (length > 0)
+	while (length--)
 	{
-		while (length--)
-			_putchar(s[length]);
-		_putchar('\n');
+		_putchar(s[length]);
+		return;
 	}
+	_putchar('\n');
 }
 
