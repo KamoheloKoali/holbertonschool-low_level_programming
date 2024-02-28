@@ -12,8 +12,10 @@ void puts2(char *str)
 	while (str[length])
 	{
 		if (length > 0)
+		{
 			int length1 = length + 1;
 			_putchar([length1]);
+		}
 		else
 			_putchar(str[length]);
 
