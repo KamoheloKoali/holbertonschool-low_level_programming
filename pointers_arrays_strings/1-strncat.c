@@ -20,8 +20,8 @@ char *_strncat(char *dest, char *src, int n)
 	 	{
 			dest[length] = src[length1];
 		 	if (length == n)
-			 	return;
-		 	length++
+			 	break;
+		 	length++;
 		 	length1++;
 	 	}
 		length++;
