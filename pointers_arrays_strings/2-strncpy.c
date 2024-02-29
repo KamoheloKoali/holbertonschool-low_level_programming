@@ -4,7 +4,7 @@
  * _strncpy - copies a string
  * @dest: pointer one of the parameter
  * @src: pointer two of the parameter
- * @n variable for parameter
+ * @n: variable for parameter
  * Return: exit point
  */
 
