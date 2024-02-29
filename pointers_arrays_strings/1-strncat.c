@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat(char *dest, char *src, int n)
+ * _strncat - concatenate strings
  * @dest: pointer for parameter
  * @src: pointer for paremeter
  * @n: integer variable for parameter
