@@ -29,6 +29,7 @@ char *cap_string(char *str)
 				{
 					for (num = 1; num < length; num++)
 					{	
+						_putchar('K');
 						if (str[length + num] == ascii_val)
 							str[length + num] = ascii_val - 32;
 					}
