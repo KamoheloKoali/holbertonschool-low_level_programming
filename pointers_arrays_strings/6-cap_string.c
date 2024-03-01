@@ -25,7 +25,7 @@ char *cap_string(char *str)
 					if (str[length] > 48 && str[length] <= 57)
 						continue;
 					str[length + 1] = ascii_val - 32;
-				} else if (str[length] == ascii_val1 && str[length + 1] == ascii_val1)
+				} else if (str[length] == ascii_val1 && str[length + 1] != ascii_val)
 				{
 					for (num = 1; num < 20; num++)
 					{	
