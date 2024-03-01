@@ -10,9 +10,10 @@ void reverse_array(int *a, int n)
 {
 	int length = 0, actlength = n - 1;
 
-	while (a[length] < n)
+	while (length < n)
 	{
 		a[length] = a[actlength];
+		_putchar('w');
 		actlength--;
 		length++;
 	}
