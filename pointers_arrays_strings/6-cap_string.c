@@ -19,7 +19,7 @@ char *cap_string(char *str)
 			for (ascii_val1 = 32; ascii_val1 < 65; ascii_val1++)
 			{
 				if (str[length] == ascii_val1 && str[length + 1] == ascii_val)
-					str[length] = ascii_val - 32;
+					str[length + 1] = ascii_val - 32;
 			}
 		}
 		length++;
