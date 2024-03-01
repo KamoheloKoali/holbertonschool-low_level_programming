@@ -27,7 +27,7 @@ char *cap_string(char *str)
 					str[length + 1] = ascii_val - 32;
 				} else if (str[length] == ascii_val1 && str[length + 1] == ascii_val1)
 				{
-					for (num = 1; num < 20; num++)
+					for (num = 1; num < length; num++)
 					{	
 						if (str[length + num] == ascii_val)
 							str[length + num] = ascii_val - 32;
