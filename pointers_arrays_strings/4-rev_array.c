@@ -8,7 +8,7 @@
 
 void reverse_array(int *a, int n)
 {
-	int length = 0, actlength = n - 1, lastel = a[n-1];
+	int length = 0, actlength = n - 1, firstel = a[length];
 
 	if (n > 0)
 	{
