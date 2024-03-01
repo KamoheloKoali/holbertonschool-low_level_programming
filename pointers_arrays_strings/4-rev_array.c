@@ -8,15 +8,17 @@
 
 void reverse_array(int *a, int n)
 {
-	int length = 0, actlength = n - 1, firstel = a[length];
+	int length = 0, length1, length2, actlength = n - 1, firstel = a[length];
+	int arr[];
+
+	for (length1 = 0, length2 = 0; length1 < n; length1++, length2++)
+		arr[length1] = a[length2];
 
 	if (n > 0)
 	{
-		while (length < (n - 1))
+		while (length < n)
 		{
-			a[length] = a[actlength];
-			if (firstel == a[actlength])
-				a[actlength] = firstel;
+			a[length] = arr[actlength];
 			actlength--;
 			length++;
 		}
