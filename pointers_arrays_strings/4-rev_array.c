@@ -15,8 +15,8 @@ void reverse_array(int *a, int n)
 		while (length < (n - 1))
 		{
 			a[length] = a[actlength];
-			//if (firstel != a[actlength])
-				//a[actlength] = firstel;
+			if (firstel == a[actlength])
+				a[actlength] = firstel;
 			actlength--;
 			length++;
 		}
