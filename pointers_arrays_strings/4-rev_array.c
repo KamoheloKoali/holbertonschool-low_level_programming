@@ -8,14 +8,17 @@
 
 void reverse_array(int *a, int n)
 {
-	int length = 0, actlength = n - 1;
+	int length = 1, actlength = n - 2, lastel = a[n-1];
 
-	while (length < n)
+	if (n > 0)
 	{
-		a[length] = a[actlength];
-		_putchar('w');
-		actlength--;
-		length++;
-	}
+		a[lastel] = a[0];
+		a[length] = lastel;
+		while (length < n)
+		{
+			a[length] = a[actlength];
+			actlength--;
+			length++;
+		}
 }
 
