@@ -9,22 +9,13 @@
 
 char *_strchr(char *s, char c)
 {
-	int length = 0, length1 = 0;
-	char *str[100];
+	int i = 0;
 
-	while (s[length])
+	while (s[i++])
 	{
-		if (s[length] == c)
-		{
-			while (s[length])
-			{
-				str[length1] = s[length];
-				length++;
-			}
-			return (str);
-		}
-		length++;
+		if (s[i] == c)
+			return (s + i);
 	}
-	return (NULL);
+	return (0);
 }
 
