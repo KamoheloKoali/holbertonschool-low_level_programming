@@ -14,7 +14,10 @@ char *_strchr(char *s, char c)
 	while (s[length])
 	{
 		if (s[length] == c)
-			return (s);
+		{
+			while (s[length])
+				putchar(s[length]);
+		}
 		length++;
 	}
 	return (NULL);
