@@ -17,6 +17,7 @@ char *_strchr(char *s, char c)
 		{
 			while (s[length])
 				_putchar(s[length]);
+			return;
 		}
 		length++;
 	}
