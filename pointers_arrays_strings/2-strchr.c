@@ -9,7 +9,8 @@
 
 char *_strchr(char *s, char c)
 {
-	int length = 0;
+	int length = 0, length1 = 0;
+	char str[100];
 
 	while (s[length])
 	{
@@ -17,10 +18,10 @@ char *_strchr(char *s, char c)
 		{
 			while (s[length])
 			{
-				s[length] = s[length];
+				str[length] = s[length];
 				length++;
 			}
-			return (s);
+			return (str);
 		}
 		length++;
 	}
