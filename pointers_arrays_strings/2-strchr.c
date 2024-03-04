@@ -15,9 +15,9 @@ char *_strchr(char *s, char c)
 	{
 		if (s[length] == c)
 		{
-			while (s[length - 1])
+			while (s[length])
 			{
-				s[length] = s[length]);
+				s[length] = s[length];
 				length++;
 			}
 			return (s);
