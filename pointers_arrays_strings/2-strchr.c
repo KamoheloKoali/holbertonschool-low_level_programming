@@ -10,17 +10,20 @@
 char *_strchr(char *s, char c)
 {
 	int length = 0;
+	char str;
 
 	while (s[length])
 	{
 		if (s[length] == c)
 		{
-			while (s[length])
+			while (s[length - 1])
 			{
 				_putchar(s[length]);
 				length++;
 			}
-			return (s);
+			length++;
+			str = s[length];
+			return (str);
 		}
 		length++;
 	}
