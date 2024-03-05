@@ -16,18 +16,11 @@ char *_strpbrk(char *s, char *accept)
 		while (accept[length1])
 		{
 			if (accept[length1] == s[length])
-			{
-				while (accept[length1])
-				{
-					s[length] = accept[length1];
-					length++;
-					length1++;
-				}
 				return (s);
-			}
+			length1++;
 		}
 		length++;
 	}
-	return (0);
+	return (NULL);
 }
 
