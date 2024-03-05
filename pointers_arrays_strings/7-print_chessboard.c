@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_chesssboard - loops through a 2D array
+ * print_chessboard - loops through a 2D array
  * @a: pointer to character
  */
 
