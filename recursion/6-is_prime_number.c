@@ -20,7 +20,7 @@ return (0);
 }
 
 /**
- * is_prime_number - checks if an integer is aprime number
+ * is_prime_number - checks if an integer is a prime number
  * @n: variable for parameter
  * Return: integer
  */
