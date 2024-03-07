@@ -39,10 +39,10 @@ int _sqrt_recursion(int n)
                 if (n / sqrt == sqrt)
                         return (sqrt);
                 else if (sqrt > 1)
-                        return (sqrt * 2);
-		else 
-			return (-1);
+                        return (sqrt * 2); 
+		return (-1);
         }
-        return (sqrt_odd(n, n - 2));
+	else
+        	return (sqrt_odd(n, n - 2));
 }
 
