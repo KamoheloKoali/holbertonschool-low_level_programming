@@ -40,7 +40,8 @@ int _sqrt_recursion(int n)
                         return (sqrt);
                 else if (sqrt > 1)
                         return (sqrt * 2);
-                return (-1);
+		else 
+			return (-1);
         }
         return (sqrt_odd(n, n - 2));
 }
