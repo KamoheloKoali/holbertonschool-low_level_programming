@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * main - adds positive numbers
+ * main - adds numbers
  * @argc: the number of arguments
  * @argv: an array of argc
  * Return: 0
