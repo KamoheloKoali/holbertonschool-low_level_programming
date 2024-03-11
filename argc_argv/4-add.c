@@ -20,9 +20,10 @@ int main(int argc, char *argv[])
 	} else if (argc == 2)
 		printf("%s\n", argv[1]);
 	else
+	{
 		for (i = 1; i < argc; i++)
 		{
-			if ((argv[i] > 32 && argv[i] < 48) || (argv[i] > 57 && argv[i] < 128))
+			if ((atoi(argv[i]) > 32 && atoi(argv[i]) < 48) || (atoi(argv[i]) > 57 && atoi(argv[i]) < 128))
 			{
 				printf("Error\n");
 				return (1);
@@ -30,5 +31,6 @@ int main(int argc, char *argv[])
 			result += atoi(argv[i]);
 		}
 		printf("%d\n", result);
+	}
 }
 
