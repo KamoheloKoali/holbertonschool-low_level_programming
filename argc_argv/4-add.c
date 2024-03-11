@@ -13,30 +13,25 @@ int main(int argc, char *argv[])
 {
 	int i, j, result = 0;
 	
-	if (argc == 2)
-		printf("%s\n", argv[1]);
-	else
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		if (argc < 2)
+        	{
+               		printf("Error\n");
+               		return (1);
+        	}else if (argc == 2)
+               		return (atoi(argv[1]));
+		for (j = 0; j < 10; j++)
 		{
-			if (argc < 2)
-        		{
-                		printf("Error\n");
-                		return (1);
-        		}else if (argc == 2)
-                		return (atoi(argv[1]));
-			for (j = 0; j < 10; j++)
+			if ((*argv[j] >= 'a' && *argv[j] <= 'z') || (*argv[j] >= 'A' && *argv[j] <= 'Z'))
 			{
-				if ((*argv[j] >= 'a' && *argv[j] <= 'z') || (*argv[j] >= 'A' && *argv[j] <= 'Z'))
-				{
-					printf("Error\n");
-					return (1);
-				}
+				printf("Error\n");
+				return (1);
 			}
-			result += atoi(argv[i]);
 		}
-		printf("%d\n", result);
+		result += atoi(argv[i]);
 	}
+	printf("%d\n", result);
 	return (0);
 }
 
