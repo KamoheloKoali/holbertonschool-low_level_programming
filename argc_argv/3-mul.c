@@ -11,14 +11,14 @@
 
 int main(int argc, char *argv[])
 {
-	int sum, num = atoi(argv[1]), num1 = atoi(argv[2]);
+	int sum;
 
 	if (argc < 3)
 	{
 		printf("Error");
 		return (1);
 	}
-	sum = num * num1;
+	sum = atoi(argv[1]) *  atoi(argv[2]);
 	printf("%d\n", sum);
 	return (0);
 }
