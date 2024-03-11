@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - multiplies two numbers
@@ -17,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error");
 		return (1);
 	}
-	sum = argv[1] * argv[2];
+	sum = num * num1;
 	printf("%d\n", sum);
 	return (0);
 }
