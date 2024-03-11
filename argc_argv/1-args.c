@@ -3,7 +3,7 @@
 
 
 /**
- * main - prints program name
+ * main - prints number of arguments
  * @argc: the number of arguments
  * @argv: an array of argc
  * Return: 0
