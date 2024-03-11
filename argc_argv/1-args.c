@@ -13,10 +13,8 @@ int main(int argc, char *argv[])
 {
 	(void) argv[argc];
 
-	if (argc <= 1)
-		return (0);
-
-	printf("%d\n", argc - 1);
-
+	if (argc > 1)
+		printf("%d\n", argc - 1);
+	return (0);
 }
 
