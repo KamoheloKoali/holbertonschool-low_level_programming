@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if ((atoi(argv[i]) > 32 && atoi(argv[i]) < 48) || (atoi(argv[i]) > 57 && atoi(argv[i]) < 128))
+			if ((argv[i] >= 'a' && argv[i] <= 'z') || (argv[i] >= 'A' && argv[i] <= 'Z'))
 			{
 				printf("Error\n");
 				return (1);
