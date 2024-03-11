@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, result = 0;
+	int i, j, result = 0;
 
 	if (argc < 2)
 	{
@@ -23,10 +23,13 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if ((*argv[i] >= 'a' && *argv[i] <= 'z') || (*argv[i] >= 'A' && *argv[i] <= 'Z'))
+			for (j = 0; j < 10; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if ((*argv[i] >= 'a' && *argv[i] <= 'z') || (*argv[i] >= 'A' && *argv[i] <= 'Z'))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
 			result += atoi(argv[i]);
 		}
