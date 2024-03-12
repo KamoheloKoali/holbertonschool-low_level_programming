@@ -19,11 +19,11 @@ char *str_concat(char *s1, char *s2)
                 return (s1);
         else if (s1 == NULL && s2 == NULL)
                 return ("");
-        else if (s1[0] == '\0')
+        else if (s1 == "")
                 return (s2);
-        else if (s2[0] == '\0')
+        else if (s2[0] == "")
                 return (s1);
-        else if (s1[0] == '\0' && s2[0] == '\0')
+        else if (s1[0] == "" && s2[0] == "")
                 return ("");
         for (length = 0; s1[length]; length++)
                 length++;
