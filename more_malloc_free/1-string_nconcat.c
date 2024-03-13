@@ -11,72 +11,29 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-        char *str;
-        unsigned int i, j, k, total_length;
+	char *s;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	if (n == 0 && s1 != NULL)
-		return (s1);
-	else if (s1 == NULL && s2 == NULL)
-		return ("");
-	else if (s1 == NULL && s2 == NULL)
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
+	else
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (!s)
 		return (NULL);
-        if (s1 == NULL)
-        {
-                for (i = 0; s2[i]; i++);
-		if (n == 0)
-                {
-                         str = malloc(i + 1);
-                        for (i = 0; s2[i]; i++)
-                                str[i] = s2[i];
-                         str[i] = '\0';
-                        return (str);
-                }
-		else if (n < i)
-                {
-                        str = malloc(n + 1);
-                        for (i = 0; i < n; i++)
-                                str[i] = s2[i];
-                         str[n] = '\0';
-                        return (str);
-                }
-                str = malloc(i + 1);
-                if (str == NULL)
-                        return (NULL);
-                for (j = 0; j < i; j++)
-                        str[j] = s2[j];
-                str[j] = '\0';
-                return (str);
-        }
-        else if (s2 == NULL)
-        {
-                for (i = 0; s1[i]; i++);
-                str = malloc(i + 1);
-                if (str == NULL)
-                        return (NULL);
-                for (j = 0; j < i; j++)
-                        str[j] = s1[j];
-                str[j] = '\0';
-                return (str);
-        }
-        for (i = 0; s1[i]; i++);
-	for (k = 0; s2[k]; k++);
-	total_length = i + (n < k? n:k) + 1;
-        str = malloc(total_length);
-        if (str == NULL)
-                return (NULL);
-        for (j = 0; j < i; j++)
-                str[j] = s1[j];
-        for (k = 0; s2[k]; k++);
-        if (n >= k)
-        {
-                for (k = 0; s2[k]; k++, j++)
-                        str[j] = s2[k];
-                str[j] = '\0';
-                return (str);
-        }
-        for (k = 0; k < n; k++, j++)
-                str[j] = s2[k];
-        str[j] = '\0';
-        return (str);
+	while (i < len1)
+	{
+		s[i] = s1[i];
+		i++;
+	}
+	while (n < len2 && i < (len1 + n))
+		s[i++] =  s2[j++];
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[j++];
+	s[i] = '\0';
+	return (s);
 }
 
