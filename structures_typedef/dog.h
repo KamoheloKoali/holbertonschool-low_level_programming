@@ -2,7 +2,7 @@
 #define DOG_H
 
 /**
- * struct dog - stores variables of type float and char
+ * struct dog - stores variables of type float and character
  * @name: pointer to character
  * @age: float variable
  * @owner: pointer to character
