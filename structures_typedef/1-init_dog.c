@@ -11,13 +11,8 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	int i;
-
-	for (i = 0; name[i]; i++)
-		d->name[i] = name[i];
+	d->name = name;
 	d->age = age;
-	for (i = 0; owner[i]; i++)
-		d->owner[i] = owner[i];
-	return;
+	d->owner[i] = owner[i];
 }
 
