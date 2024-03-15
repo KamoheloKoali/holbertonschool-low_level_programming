@@ -11,9 +11,10 @@
  */
 
 dog_t *new_dog(char *name, float age, char *owner) {
+	dog_t *new_dog_ptr;
 	if (name == NULL || owner == NULL)
-		return;
-	dog_t *new_dog_ptr = (dog_t *)malloc(sizeof(dog_t));
+		return (NULL);
+	new_dog_ptr = (dog_t *)malloc(sizeof(dog_t));
 	if (new_dog_ptr == NULL)
 		return (NULL);
 	strncpy(new_dog_ptr->name, name, sizeof(new_dog_ptr->name) - 1);
