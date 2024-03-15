@@ -14,10 +14,10 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	int i;
 
 	for (i = 0; name[i]; i++)
-		d->name = name[i];
+		d->name[i] = name[i];
 	d->age = age;
 	for (i = 0; owner[i]; i++)
-		d->owner = owner[i];
+		d->owner[i] = owner[i];
 	return;
 }
 
