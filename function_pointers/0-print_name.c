@@ -3,9 +3,7 @@
 /**
  * print_name: prints a string
  * @name: pointer to character
- * @f: pointer to function
- * Description: takes name and calls back
- * the function pointed to by f
+ * @f: A pointer to a function that prints a string
  */
 
 void print_name(char *name, void (*f)(char *))
