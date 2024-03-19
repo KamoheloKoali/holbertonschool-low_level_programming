@@ -18,11 +18,11 @@ int (*get_op_func(char *s))(int, int)
 	{NULL, NULL}
 	};
 
-	if (s[0] != '+' && s[0] != '-' && s[0] != '*' && s[0] = '/' && s[0] != '%')
+	if (s[0] != '+' && s[0] != '-' && s[0] != '*' && s[0] == '/' && s[0] != '%')
 		return (NULL);
-	while (ops[i] != NULL)
+	while (ops[i].op != NULL)
 	{
-		ops[i] == s ? return (ops[i].f):continue;
+		return ((ops[i].op == s) ? ops[i].f : NULL);
 		i++;
 	}
 	return (0);
