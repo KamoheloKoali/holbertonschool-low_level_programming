@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stddef.h>
+#include <string.h>
 
 /**
  * get_op_func - returns a pointer to a function
@@ -23,7 +24,7 @@ int (*get_op_func(char *s))(int, int)
 		return (NULL);
 	while (ops[i].op != NULL)
 	{
-		return ((ops[i].op == s) ? ops[i].f : NULL);
+		return ((strcmp(ops[i].op, s) == 0 ? ops[i].f : NULL);
 		i++;
 	}
 	return (0);
