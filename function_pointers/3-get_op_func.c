@@ -23,7 +23,8 @@ int (*get_op_func(char *s))(int, int)
 		return (NULL);*/
 	while (ops[i].op != NULL && (s[0] != '+' && s[0] != '-' && s[0] != '*' && s[0] != '/' && s[0] != '%'))
 	{
-		return (ops[i].op[0] == s[0] ? ops[i].f : NULL);
+		if (ops[i].op[0] == s[0])
+		       	return (ops[i].f);
 		i++;
 	}
 	return (NULL);
