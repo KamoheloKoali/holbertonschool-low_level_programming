@@ -23,7 +23,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	else if (argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*' && argv[2][0] != '/' && argv[2][0] != '%')
+	else if (argv[2][0] != '+' &&
+		 argv[2][0] != '-' &&
+		 argv[2][0] != '*' &&
+		 argv[2][0] != '/' &&
+		 argv[2][0] != '%')
 	{
 		printf("Error\n");
 		exit(99);
