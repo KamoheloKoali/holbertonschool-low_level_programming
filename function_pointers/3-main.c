@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error");
 		exit(98);
 	}
-	else if (argv[2][0] != 37 && argv[2][0] != 42 && argv[2][0] != 43 && argv[2][0] != 45 && argv [2][0] != 47)
+	else if (argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*' && argv[2][0] != '/' && argv [2][0] != '%')
 	{
 		printf("Error");
 		exit(99);
