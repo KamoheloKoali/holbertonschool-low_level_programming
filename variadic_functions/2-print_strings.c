@@ -19,7 +19,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		return;
 	} else
 	{
-		va_start(args, char*);
+		va_start(args, n);
 		for (i = 0; i < n; ++i)
 		{
 			printf("%s", va_arg(args, char *) != NULL ? va_arg(args, char *) : "(nil)");
