@@ -12,7 +12,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list args;
-	char *str;
+	char *str, *last_string;
 
 	if (n == 0)
 	{
@@ -32,8 +32,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", separator);
 		}
 	}
-	if (va_arg(args, char *) != NULL)
-		printf("%s\n", va_arg(args, char *));
+	last_string = va_arg(args, char *);
+	if (last_string != NULL)
+		printf("%s\n", last_string);
 	else 
 		printf("(nil)\n");
 	va_end(args);
