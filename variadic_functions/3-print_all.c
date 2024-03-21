@@ -55,6 +55,14 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	va_list args;
 
+	switch (format)
+	{
+		case NULL:
+			printf("\n");
+			return;
+		default:
+			break;
+	}
 	va_start(args, format);
 	while (*format)
 	{
