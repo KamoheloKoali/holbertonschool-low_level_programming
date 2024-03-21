@@ -1,15 +1,15 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdarg.h>
 
 /**
  * chara - prints character
  * @c: pointer to character to be printed
  */
 
-void chara(char *c)
+void chara(char c)
 {
-	_putchar(c);
+	printf("%c", c);
 }
 
 /**
@@ -17,7 +17,7 @@ void chara(char *c)
  * @n: pointer to integer to be printed
  */
 
-void integ(int *n)
+void integ(int n)
 {
 	printf("%d", n);
 }
@@ -27,7 +27,7 @@ void integ(int *n)
  * @n: pointer to float to be printed
  */
 
-void dec(float *n)
+void dec(float n)
 {
 	printf("%f", n);
 }
@@ -52,66 +52,32 @@ void str(char *str)
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0;
-	void *ptr;
+	int i = 0;
 	va_list args;
 
 	va_start(args, format);
 	while (*format)
-		i++;
-	while (format[i - 2])
 	{
-		switch (format[j])
+		switch (format[i])
 		{
 			case 'c':
-				ptr = va_arg(args, char);
-				chara(ptr);
-				printf(", ");
+				chara(va_arg(args, char));
 				break;
 			case 'i':
-				ptr = va_arg(args, int);
-				integ(ptr);
-				printf(", ");
+				integ(va_arg(args, int));
 				break;
 			case 'f':
-				ptr = va_arg(args, float);
-				dec(ptr);
-				printf(", ");
+				dec(va_arg(args, float));
 				break;
 			case 's':
-				ptr = va_arg(args, char *);
-				str(ptr);
-				printf(", ");
+				str(va_arg(args, char *));
 				break;
 			default:
 				break;
 		}
-		j++;
-	}
-	switch (format[i - 1])
-	{
-		case 'c':
-			ptr = va_arg(args, char);
-			chara(ptr);
+		if (format[i + 1])
 			printf(", ");
-			break;
-		case 'i':
-			ptr = va_arg(args, int);
-			integ(ptr);
-			printf(", ");
-			break;
-		case 'f':
-			ptr = va_arg(args, float);
-			dec(ptr);
-			printf(", ");
-			break;
-		case 's':
-			ptr = va_arg(args, char *);
-			str(ptr);
-			printf(", ");
-			break;
-		default:
-			break;
+		i++;
 	}
 	printf("\n");
 }
