@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				chara(va_arg(args, char));
+				chara(va_arg(args, int));
 				break;
 			case 'i':
 				integ(va_arg(args, int));
