@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 				integ(va_arg(args, int));
 				break;
 			case 'f':
-				dec(va_arg(args, float));
+				dec(va_arg(args, double));
 				break;
 			case 's':
 				str(va_arg(args, char *));
