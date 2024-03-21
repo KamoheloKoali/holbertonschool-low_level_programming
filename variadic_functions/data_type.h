@@ -1,3 +1,6 @@
+#ifndef DATA_TYPE_H
+#define DATA_TYPE_H
+
 #include "variadic_functions.h"
 #include <stdio.h>
 
@@ -43,4 +46,6 @@ void str(char *str)
 	else
 		printf("%s", str);
 }
+
+#endif /* DATA_TYPE_H */
 
