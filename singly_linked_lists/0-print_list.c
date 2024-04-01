@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -8,7 +9,7 @@
  * Return: number of nodes
  */
 
-size_t print_list(const list_t *h);
+size_t print_list(const list_t *h)
 {
 	size_t count = 1;
 	list_t *ptr;
