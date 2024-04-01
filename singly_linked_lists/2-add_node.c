@@ -12,7 +12,7 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t **new, **current;
+	list_t *new, **current;
 
 	if (str == NULL)
 		return (NULL);
