@@ -22,13 +22,21 @@ list_t *add_node_end(list_t **head, const char *str)
 	for (length = 0; str[length]; length++)
 		;
 	new->len = length;
+	new->next = NULL;
 	if (new == NULL)
 	{
 		free(new);
 		return (NULL);
 	}
-	temp = new;
-	*head->next = current;
+	if (*head == NULL)
+		*head = new;
+	else
+	{
+		temp = *head;
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = temp;
+	}
 	return (new);
 }
 
