@@ -5,7 +5,6 @@
 /**
  * free_dnodeint - free dlistint_int list
  * @head: pointer to first node in list
- * Return: pointer to new node
  */
 
 void free_dlistint(dlistint_t *head)
