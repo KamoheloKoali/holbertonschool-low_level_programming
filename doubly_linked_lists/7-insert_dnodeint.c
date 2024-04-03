@@ -4,7 +4,7 @@
 
 /**
  * insert_dnodeint_at_index - add a new node at spicified position in the list
- * @head: pointer to first node in list
+ * @h: pointer to first node in list
  * @idx: position to insert new node at
  * @n: data to be stored in new node
  * Return: pointer to new node
@@ -27,16 +27,21 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	while (current != NULL)
 	{
 		if (idx == 0)
+		{
 			add_dnodeint(h, n);
-		else if (last == idx)
+			break;
+		} else if (last == idx)
+		{
 			add_dnodeint_end(h, n);
-		else
+			break;
+		} else if (count == idx)
 		{
 			new->next = current;
 			prev = current->prev;
 			current->prev = new;
 			prev->next = new;
 			new->prev = prev;
+			break;
 		}
 		current = current->next;
 		count++;
