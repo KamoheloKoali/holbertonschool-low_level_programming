@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * free_dnodeint - free dlistint_int list
+ * free_dlistint - free dlistint_int list
  * @head: pointer to first node in list
  */
 
