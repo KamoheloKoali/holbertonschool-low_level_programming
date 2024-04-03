@@ -29,19 +29,17 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			{
 				*head = current->next;
 				free(current);
-				break;
 			} else if (index == last)
 			{
 				current->next->prev = NULL;
 				free(current);
-				break;
 			} else
 			{
 				current->prev->next = current->next;
 				current->next->prev = current->prev;
 				free(current);
-				break;
 			}
+			break;
 		}
 		current = current->next;
 		count++;
