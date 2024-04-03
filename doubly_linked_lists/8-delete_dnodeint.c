@@ -5,22 +5,22 @@
 /**
  * delete_dnodeint_at_index - delet node at spicified position in the list
  * @head: pointer to first node in list
- * @idx: position to delete node in list
+ * @index: position to delete node in list
  * Return: pointer to new node
  */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *current = *h;
+	dlistint_t *current = *head;
 	unsigned int count = 0, last;
 
-	if  (*h == NULL)
+	if  (*head == NULL)
 		return (-1);
 	for (last = 0; current != NULL; last++)
 		current = current->next;
 	if (idx > last)
 		return (-1);
-	current = *h;
+	current = *head;
 	while (current != NULL)
 	{
 		if (count == idx)
