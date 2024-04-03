@@ -33,7 +33,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		{
 			if (index == last)
 			{
-				current->next->prev = NULL;
+				current->prev->next = NULL;
 				free(current);
 			} else
 			{
