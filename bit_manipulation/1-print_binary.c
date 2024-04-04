@@ -9,4 +9,10 @@
 
 void print_binary(unsigned long int n)
 {
+	while (n)
+	{
+		putchar(n & 1 ? '1' : '0');
+		n >>= 1;
+	}
+}
 
