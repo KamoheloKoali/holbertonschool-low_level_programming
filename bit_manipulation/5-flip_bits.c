@@ -8,9 +8,9 @@
  * Return: number of bits needed to be flipped
  */
 
-unsigned int flip_bits(unsigned long int n, unsigned int m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int setBits = n ^ m, count = 0;
+	unsigned long int setBits = n ^ m, count = 0;
 
 	while (setBits != 0)
 	{
