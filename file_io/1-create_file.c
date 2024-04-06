@@ -7,7 +7,7 @@
 /**
  * create_file - create with permissions rw-------
  * @filename: name of the file
- * @content: what's written into the new file
+ * @text_content: what's written into the new file
  * Return: 1 on success and  -1 on failure
  */
 
@@ -20,7 +20,12 @@ int create_file(const char *filename, char *text_content)
 	test = open(filename, O_RDONLY);
 	if (test > -1)
 	{
-		if(truncate(filename, 0) != 0)
+		if (truncate(filename, 0) != 0)
+			return (-1);
+		for (count = 0; text_content[count]; count++)
+			;
+		num = write(test, text_content, count);
+		if (num < 0)
 			return (-1);
 		close(test);
 		return (1);
