@@ -18,9 +18,9 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 	test = open(filename, O_RDONLY);
-	if (test >= 0)
+	if (test > -1)
 	{
-		if(ftruncate(test, 0) != 0)
+		if(truncate(filename, 0) != 0)
 			return (-1);
 		close(test);
 		return (1);
