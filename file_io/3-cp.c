@@ -1,11 +1,12 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * test_num_args - Checks to ensure argc is 3
  * @argc: number of arguments passed
- *
  * Return: void
  */
+
 void test_num_args(int argc)
 {
 	if (argc != 3)
@@ -17,7 +18,6 @@ void test_num_args(int argc)
 
 /**
  * test_file_from - Checks that file_from is valid
- *
  * @check: -1 if fd_from open command failed, positive int otherwise
  * @file: file_from file name
  * @fd_from: file descriptor of file_from
@@ -45,7 +45,6 @@ void test_file_from(ssize_t check, char *file, int fd_from, int fd_to)
  * @file: file_to file name
  * @fd_from: file descriptor of file_from
  * @fd_to: file descriptor of file_to
- *
  * Return: void
  */
 
@@ -66,7 +65,6 @@ void test_file_to(ssize_t check, char *file, int fd_from, int fd_to)
  * test_good_close - Test that fd_close worked
  * @close: Return from close
  * @fd: File Descriptor of closed file
- *
  * Return: void
  */
 
@@ -81,7 +79,6 @@ void test_good_close(int close, int fd)
 
 /**
  * main - Copies content in file_from to file_to
- *
  * @argc: Count of arguments passed
  * @argv: array of pointers to arguments passed
  *
